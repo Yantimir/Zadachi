@@ -563,6 +563,15 @@
 
 // Console.WriteLine($"Расстояние между точками = {distance}");
 
+
+
+
+
+
+
+
+
+
 // Задача 23
 
 // Напишите программу, которая принимает на вход число (N) и 
@@ -754,16 +763,166 @@
 
 // 6, 1, 33 -> [6, 1, 33]
 
-void getArray(int sizeArray)
-{
-  int[] array = new int[sizeArray];
-  Random myRandom = new Random();
+// void getArray(int sizeArray)
+// {
+//   int[] array = new int[sizeArray];
+//   Random myRandom = new Random();
 
-  for (int i = 0; i < array.Length; i++)
-  {
-    array[i] = myRandom.Next(0, sizeArray);
-    Console.Write($"{ array[i]}, ");
-  }
-}
-getArray(8);
+//   for (int i = 0; i < array.Length; i++)
+//   {
+//     array[i] = myRandom.Next(0, sizeArray);
+//     Console.Write($"{ array[i]}, ");
+//   }
+// }
+// getArray(8);
+
+
+
+
+
+// Задача 31: Задайте массив из 12 элементов, заполненный случайными числами 
+// из промежутка [-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных 
+// чисел равна 29, сумма отрицательных равна -20.
+// заполнение случайными числами
+// void getArray(int sizeArray)
+// {
+
+//   int[] array = new int[sizeArray];
+//   int sumMinusNumber = 0;
+//   int sumPlusNumber = 0;
+
+//   for (int i = 0; i < array.Length; i++)
+//   {
+//     array[i] = new Random().Next(-9, 10);
+//     Console.Write($"{ array[i]} ");
+
+//     if(array[i] < 0)
+//     {
+//       sumMinusNumber += array[i];
+//     }
+//     else
+//     {
+//       sumPlusNumber += array[i];
+//     }
+//   }    
+//   Console.WriteLine();
+//   Console.WriteLine($"Сумма отрицательных чисел: {sumMinusNumber}");
+//   Console.WriteLine($"Сумма положительных чисел: {sumPlusNumber}");
+// }
+// getArray(12);
+
+// Задача 32: Напишите программу замена элементов массива: положительные элементы 
+// замените на соответствующие отрицательные, и наоборот.
+// [-4, -8, 8, 2] -> [4, 8, -8, -2] 
+// void getArray(int sizeArray)
+// {
+//   int[] array = new int[sizeArray];
+//   int minusNumber = 0;
+//   int plusNumber = 0;
+
+//   for (int i = 0; i < array.Length; i++)
+//   {
+//     array[i] = new Random().Next(-99, 100);
+//     Console.Write($"{array[i]} ");
+
+//     if(array[i] < 0)
+//     {
+//       minusNumber = array[i] * -1;
+//       Console.WriteLine($"{minusNumber} ");
+
+//     }
+//     else
+//     {
+//       plusNumber = array[i] * -1;
+//       Console.WriteLine($"{plusNumber} ");
+//     }
+//   }    
+// }
+// getArray(4);
+
+
+
+// Задача 33: Задайте массив. Напишите программу, которая определяет, 
+// присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет
+// -3; массив [6, 7, 19, 345, -3] -> да
+// Console.WriteLine("Введите размер массива: ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число для поиска: ");
+// int searchNumber = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[sizeArray];
+// for (int i = 0; i < array.Length; i++)
+// {
+//   array[i] = new Random().Next(-9, 10);
+//   Console.Write(array[i] + " ");
+//   if(array[i] == searchNumber)
+//   {
+//     Console.WriteLine("Заданное число есть в массиве");
+//   }
+//   else
+//   {
+//     Console.WriteLine("Заданного числа нет в массиве");
+//   }
+// }
+
+
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. 
+// Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
+// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
+// [5, 18, 123, 6, 2] -> 1
+// [1, 2, 3, 6, 2] -> 0
+// [10, 11, 12, 13, 14] -> 5
+
+// Console.WriteLine("Введите размер массива: ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// int count = 0;
+// int[] array = new int[sizeArray];
+// for (int i = 0; i < array.Length; i++)
+// {
+//   array[i] = new Random().Next(0, 101);
+//   Console.Write(array[i] + " ");
+//   if (array[i] >= 10 && array[i] <= 99)
+//   {
+//     count++;
+//   }
+// }
+// Console.WriteLine();
+// Console.WriteLine($"количество элементов массива, значения которых лежат в отрезке [10,99]: {count}");
+
+
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. 
+// Парой считаем первый и последний элемент, второй и предпоследний и т.д. 
+// Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 3 6] -> 36 21
+
+// Console.WriteLine("Введите размер массива: ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[sizeArray];
+
+// for (int i = 0; i < array.Length; i++)
+// {
+//   array[i] = new Random().Next(0, 11);
+//   if (i != array.Length - 1)
+//   {
+//     Console.Write($"{array[i]}, ");
+//   }
+//   else
+//   {
+//     Console.WriteLine($"{array[i]}");
+//   }
+// }
+// int[] newArray = new int[sizeArray / 2 + sizeArray % 2];
+// Console.WriteLine("Новый массив: ");
+// for(int i = 0; i < newArray.Length; i++)
+// {
+//   newArray[i] = array[i] * array[array.Length - 1 - i];
+//   if(i != newArray.Length - 1) Console.Write($"{newArray[i]}, ");
+//   else Console.WriteLine($"{newArray[i]}");
+// }
+
+
+
+
 
