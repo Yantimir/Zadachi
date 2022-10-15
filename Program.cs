@@ -926,3 +926,84 @@
 
 
 
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными 
+// числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// [345, 897, 568, 234] -> 2
+
+// Console.WriteLine("Введите размер массива: ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[sizeArray];
+// int count = 0;
+// for (int i = 0; i < array.Length; i++)
+// {
+//   array[i] = new Random().Next(100, 1000);
+//   Console.Write(array[i] + " ");
+//   if (array[i] % 2 == 0) count += 1;
+// }
+// Console.WriteLine();
+// Console.WriteLine($"количество чётных чисел в массиве: {count}");
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму элементов, стоящих на нечётных позициях.
+
+// [3, 7, 23, 12] -> 19
+
+// [-4, -6, 89, 6] -> 0
+
+// Console.WriteLine("Введите размер массива: ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[sizeArray];
+// int count = 0;
+// for (int i = 0; i < array.Length; i++)
+// {
+//   array[i] = new Random().Next(100, 1000);
+//   Console.Write(array[i] + " ");
+//   if (i % 2 != 0) count += array[i];
+// }
+// Console.WriteLine();
+// Console.WriteLine($"сумма элементов, стоящих на нечётных позициях: {count}");
+
+
+
+
+
+
+
+
+
+
+// Задача 38: Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+
+// [3 7 22 2 78] -> 76
+
+// Console.WriteLine("Введите размер массива: ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// double[] array = new double[sizeArray];
+// double minNumber = 0;
+// double maxNumber = 0;
+// double result = 0;
+// for (int i = 0; i < array.Length; i++)
+// {
+//   array[i] = Math.Round(new Random().Next(-100, 100) + new Random().NextDouble(), 2); 
+//   Console.Write(array[i] + " ");
+//   if(minNumber > array[i]) minNumber = array[i];
+//   if(maxNumber < array[i]) maxNumber = array[i];
+// }
+// result = maxNumber - minNumber;
+// Console.WriteLine();
+// Console.WriteLine($"минимальное число в массиве: {minNumber}");
+// Console.WriteLine($"максимальное число в массиве: {maxNumber}");
+// Console.WriteLine($"разница между максимальным и минимальным элементами массива: {result}");
