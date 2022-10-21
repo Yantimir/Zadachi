@@ -766,12 +766,12 @@
 // void getArray(int sizeArray)
 // {
 //   int[] array = new int[sizeArray];
-//   Random myRandom = new Random();
+//   // Random myRandom = new Random();
 
 //   for (int i = 0; i < array.Length; i++)
 //   {
-//     array[i] = myRandom.Next(0, sizeArray);
-//     Console.Write($"{ array[i]}, ");
+//     array[i] = new Random().Next(0, sizeArray);
+//     Console.Write($"{array[i]}, ");
 //   }
 // }
 // getArray(8);
@@ -1007,3 +1007,227 @@
 // Console.WriteLine($"минимальное число в массиве: {minNumber}");
 // Console.WriteLine($"максимальное число в массиве: {maxNumber}");
 // Console.WriteLine($"разница между максимальным и минимальным элементами массива: {result}");
+
+
+
+
+
+// Задача 39: Напишите программу, которая перевернёт одномерный массив 
+// (последний элемент будет на первом месте, а первый - на последнем и т.д.)
+// [1 2 3 4 5] -> [5 4 3 2 1]
+// [6 7 3 6] -> [6 3 7 6]
+// Console.WriteLine("Введите размер массива: ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[sizeArray];
+// int temp = 0;
+// Console.WriteLine("Исходный массив: ");
+// for (int j = 0; j < array.Length; j++)
+// {
+//     array[j] = new Random().Next(0, 10);
+//     Console.Write($"{array[j]} ");
+// }
+
+// Console.WriteLine("Развернутый массив: ");
+// for (int i = 0; i < array.Length / 2; i++)
+// {
+//     temp = array[i];
+//     array[i] = array[array.Length - 1 - i];
+//     array[array.Length - 1 - i] = temp;
+// }
+
+// for (int j = 0; j < array.Length; j++)
+// {
+//     Console.Write($"{array[j]} ");
+// }
+// Console.WriteLine();
+
+
+
+
+
+// Задача 40: Напишите программу, которая принимает на вход три числа и 
+// проверяет, может ли существовать треугольник с сторонами такой длины.
+// Теорема о неравенстве треугольника: каждая сторона треугольника меньше 
+// суммы двух других сторон
+// void Main()
+// {
+//   int a = GetNumber();
+//   int b = GetNumber();
+//   int c = GetNumber();
+//   CheckForTriangle(a, b, c);
+// }
+// int GetNumber()
+// {
+//   Console.WriteLine("Введите число");
+//   int num = int.Parse(Console.ReadLine()!);
+//   return num;
+// }
+
+// void CheckForTriangle(int a, int b, int c)
+
+// {
+//   if (a < (b + c) && b < (c + a) && c < (a + b))
+//   {
+//     Console.WriteLine("Может существовать треугольник с сторонами такой длины");
+//   }
+//   else
+//   {
+//     Console.WriteLine("Не может существовать треугольник с сторонами такой длины");
+//   }
+// }
+
+// Main();
+
+
+
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+// void Main()
+// {
+//   int a = GetNumber();
+//   ChangeToBinary(a);
+
+// }
+
+// int GetNumber()
+// {
+//   Console.WriteLine("Введите число");
+//   int num = int.Parse(Console.ReadLine()!);
+//   return num;
+// }
+
+// void ChangeToBinary(int number)
+// {
+
+//   int SIZE = 0;
+//   int tempNumber = number;
+//   for (int j = 0; tempNumber > 0; j++)
+//   {
+//     tempNumber = tempNumber / 2;
+//     SIZE = j;
+
+//   }
+
+//   int[] arr = new int[SIZE + 1];
+//   //Console.Write($" SIZE+1 = {SIZE + 1} ");
+
+//   for (int i = 0; number > 0; i++)
+//   {
+//     arr[SIZE - i] = number % 2;
+
+//     number = number / 2;
+
+//   }
+
+//   Console.WriteLine("\nНаше число = ");
+//   for (int i = 0; i < arr.Length; i++)
+//   {
+//     Console.Write($" {arr[i]} ");
+//   }
+// }
+// Main();
+
+// Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. 
+// Первые два числа Фибоначчи: 0 и 1.
+// Если N = 5 -> 0 1 1 2 3
+// Если N = 3 -> 0 1 1
+// Если N = 7 -> 0 1 1 2 3 5 8
+// System.Console.WriteLine("Введите число: ");
+// int fib = Convert.ToInt32(Console.ReadLine());
+
+// int[] fibo = new int[fib];
+// fibo[0] = 0;
+// fibo[1] = 1;
+// for (int i = 2; i < fibo.Length; i++)
+// {
+//   fibo[i] = fibo[i - 1] + fibo[i - 2];
+// }
+
+// for (int j = 0; j < fibo.Length; j++)
+// {
+//   System.Console.Write($"{fibo[j]} ");
+// }
+
+
+
+// Задача 45: Напишите программу, которая будет создавать копию заданного массива 
+// с помощью поэлементного копирования.
+
+
+// Console.WriteLine("Введите размер массива: ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[sizeArray];
+// int[] newArray = new int[sizeArray];
+
+// for (int i = 0; i < sizeArray; i++)
+// {
+//   array[i] = new Random().Next(10, 100);
+//   Console.Write(array[i] + " ");
+
+
+// }
+// Console.WriteLine();
+// for(int j = 0; j < array.Length; j++)
+// {
+//   newArray[j] = array[j];
+//   Console.Write(newArray[j] + " ");
+// }
+
+
+
+
+
+
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. 
+// Посчитайте, сколько чисел больше 0 ввёл пользователь.
+
+// 0, 7, 8, -2, -2 -> 2
+
+// 1, -7, 567, 89, 223-> 3
+// Console.Clear();
+// Console.Write("Введите элементы(через пробел): ");
+// int[] arr = Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
+// int count = 0;
+
+// for (int i = 0; i < arr.Length; i++)
+// {
+//   if (arr[i] > 0)
+//   {
+//     count++;
+//   }
+// }
+
+// Console.WriteLine($"Количество элементов больше нуля: {count}");
+
+
+
+
+
+
+
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 
+// задаются пользователем.
+
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+// Console.Clear();
+// Console.Write("Введите k1: ");
+// var k1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите b1: ");
+// var b1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите k2: ");
+// var k2 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите b2: ");
+// var b2 = Convert.ToDouble(Console.ReadLine());
+ 
+// var x = -(b1 - b2) / (k1 - k2);
+// var y = k1 * x + b1;  
+// x = Math.Round(x, 3);
+// y = Math.Round(y, 3);
+ 
+// Console.WriteLine($"Пересечение в точке: ({x};{y})");
